@@ -15,8 +15,6 @@ def create_app(config_name, overrides=None):
         app.config.from_mapping(overrides)
 
     print "Using config: " + config_name
-
-    from quizApp.views.core import core
-    app.register_blueprint(core)
+    print "Debug is: " + str(app.config["DEBUG"])
 
     return app
